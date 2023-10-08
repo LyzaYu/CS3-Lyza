@@ -1,10 +1,12 @@
-	    body {
+	   body {
                  background-image: url("https://wallpapers.com/images/hd/studio-ghibli-howl-s-moving-castle-j40hqc63s09xvdtw.jpg");
                  background-repeat: no-repeat;
                  background-position: center;
-		 background-size: 768px 432px;
+		 background-size: 960px 540px;
              }
              h1 {
+		 margin-left: auto;
+		 margin-right: auto;
 		 background-color: #708238;
                  text-align: center;
 		 font-family: times;
@@ -14,13 +16,18 @@
 		 margin-bottom: 20px;				 
              }
              p {
+		 margin-left: auto;
+		 margin-right: auto;
                  background-color: hsl( 215, 51%, 70%);
                  text-align: justify;
+		 font-style: italic;
                  padding: 20px;
 		 border-style: solid dotted double dashed;
                  width: 500px;
              }
              span {
+		 font-weight: bold;
+		 font-style: italic;
                  color: rgb(39, 22, 223);
 		 margin-left: 2px;
 		 margin-right: 5px;
