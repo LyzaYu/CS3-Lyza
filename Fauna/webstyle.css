@@ -1,0 +1,222 @@
+
+		body {
+			background-image: url("https://github.com/LyzaYu/CS3-Lyza/blob/main/Fauna/bg.jpg?raw=true");
+			margin: 0;
+		}
+		#logo {
+			float: left;
+			margin: 10px;
+			width: 100px;
+			height: 50px; 
+		}
+		#menu {
+			text-align: center;
+			display: flex;
+			background-color: rgb(112, 130, 70, 0.70);
+			flex-direction: row;
+			margin: 0;
+		}
+		#menu > div {
+			padding: 10px;
+			margin-top: 15px;
+			margin-bottom: 10px;
+		}
+		#menu div a {
+			background-color: rgb(110, 120, 80);
+			text-decoration: none;
+			color: white;
+			font-size: 20px;
+			font-family: arial;
+			text-shadow: 0px 1px 2px black;
+			border: 2px solid white;
+			padding: 10px 40px;
+			transition-duration: 0.4s;
+		}
+		#menu div a:hover{
+			background-color: rgb(243, 229, 160);
+			border: 2px solid black;
+			text-shadow: 1px 2px 7px black;
+		}
+		.tohover{
+			position: relative;
+		}
+		.tohover .hovertext {
+			visibility: hidden;
+			width: 150px;
+			background-color: black;
+			color: white;
+			text-align: center;
+			border-radius: 6px;
+			padding: 5px 0;
+			position: absolute;
+			z-index: 1;
+		}	
+		.tohover:hover .hovertext {
+			visibility: visible;
+		}
+		#nav{
+			margin-top:30px;
+		}
+		#nav a {
+			text-decoration: none;
+			display: inline;
+			padding: 10px 16px;
+			transition-duration: 0.4s;
+		}
+		#nav a:hover {
+			background-color: rgb(243, 229, 160);
+			color: white;
+			text-shadow: 0px 2px 7px black;
+		}
+		.previous {
+			background-color: rgb(110, 120, 80);
+			color: white;
+			margin: 0 5px 0px 230px;
+			border: 2px solid white;
+		}
+		.next {
+			background-color: rgb(110, 120, 80);
+			color: white;
+			margin: none;
+			border: 2px solid white;
+		}
+		.round {
+			border-radius: 50%;
+		}
+		.search input[type=text]{
+			background-color: rgb(110, 120, 80);
+			color: white;
+			border: 2px solid white;
+			font-size: 18px;
+			font-family: arial;
+			text-align: left;
+			margin-left:30px;
+			text-shadow: 0px 1px 2px black;
+			width: 200px;
+		}	
+		.glass{
+			margin: 20px 5px;
+			width: 30px;
+			height: 30px
+		}
+		#texts{
+			float:left;
+			display: flex;
+			flex-direction: column;
+		}
+		header {
+			margin-top: 40px;
+			margin-left: 30px;
+			font-family: times;
+			font-weight: bold;
+			font-size: 80px;
+			text-shadow: 0px 0px 2px black;
+			width: 600px;
+			height: 190px;
+			border-top: 3px solid black;
+			border-bottom: 3px solid black;
+		}
+		#texts h3 {
+			width: 540px;
+			margin-left: 30px;
+			margin-top: 50px;
+			font-family: system;
+		}
+		#pictures {
+			float: right;
+			width: 630px;
+			height: 695px;
+			display: flex;
+			flex-direction: column;
+			background-color: rgb(243, 229, 160, 0.50);
+		}
+		#animals {
+			margin: 10px;
+			width: 610px;
+			height: 640px;
+		}
+		#content {
+			width: 90%;
+			height: 100%;
+			background-color: rgb(243, 229, 160, 0.80);
+			display: flex;
+			flex-direction: column;
+			margin-left: 5%;
+		}
+		#content #col1{
+			display: flex;
+			flex-direction: row;
+		}
+		#content #col2{
+			display: flex;
+			flex-direction: row;
+		}
+		#title{
+			font-family: times;
+			padding: 5px;
+			margin-left: 15px;
+			text-shadow: 0px 1px 2px black;
+		}
+		.jaguarPic {
+			width: 280px;
+			height: 175px;
+			margin-left:15px;
+			border: 2px solid black;
+			padding:5px;
+		}
+		.bulletlist {
+			font-family: times;
+			font-size: 15px;
+			width: 270px;
+		}
+		.description {
+			width: 800px;
+			margin-left: 20px;
+			font-family: times;
+			font-size: 15px;
+			padding: none;
+		}
+		
+		.vidtitle{
+			margin-left: 20px;
+			text-decoration: none;
+			color: black;
+			font: times;
+		}
+		.thumbnail{
+			margin-top: 3px;
+			margin-left: 20px;
+			width: 280px;
+			height: 160px;
+		}
+		#content .groupimage {
+			margin-top: 30px;
+			margin-left: 30px;
+			border: 2px solid black;
+			padding:4px;
+			width: 425px;
+			height: 295px;
+		}
+		
+		#content .factlist {
+			font-family: times;
+			font-size: 15px;
+			
+		}
+		
+		#content h3 {
+			margin-left: 25px;
+			border-bottom: 1px solid black;
+			width: 350px;
+		}
+		#content .facts{
+			text-align: left;
+			margin-left: 10px;
+			float: left;
+			padding: 5px;
+			width: 440px;
+			margin-right: 20px;
+			height: 320px;
+		}
+		
+	
