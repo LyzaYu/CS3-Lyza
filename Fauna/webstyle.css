@@ -36,6 +36,7 @@
 			background-color: rgb(243, 229, 160);
 			border: 2px solid black;
 			text-shadow: 1px 2px 7px black;
+			border-radius: 25px;
 		}
 		.tohover{
 			position: relative;
