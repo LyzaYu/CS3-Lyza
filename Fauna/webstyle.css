@@ -135,6 +135,10 @@
 			width: 610px;
 			height: 640px;
 		}
+
+		#animals img{
+			transition: transform 0.2s;
+		}
 		#animals img:hover{
 			transform: scale(1.1);
 		}
