@@ -41,6 +41,9 @@
 			text-shadow: 1px 2px 7px black;
 			border-radius: 25px;
 		}
+		#menu div a:active{
+			box-shadow: 0px 2px 4px black;
+		}
 		.tohover{
 			position: relative;
 		}
