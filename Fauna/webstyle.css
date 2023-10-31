@@ -151,7 +151,6 @@
 			display: flex;
 			flex-direction: row;
 		}
-		
 		#sourcelogo{
 			margin-top: 150px;
 			margin-left: 10px;
@@ -228,13 +227,11 @@
 			width: 405px;
 			height: 295px;
 		}
-		
 		#content .factlist {
 			font-family: times;
 			font-size: 15px;
 			
 		}
-		
 		#content h3 {
 			margin-left: 25px;
 			border-bottom: 1px solid black;
@@ -250,4 +247,3 @@
 			height: 320px;
 		}
 		
-	
