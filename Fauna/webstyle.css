@@ -195,6 +195,10 @@
 			margin-left:15px;
 			border: 2px solid black;
 			padding:5px;
+			transition: transform 0.2s;
+		}
+		.jaguarPic:hover {
+			transform: scale(1.2);
 		}
 		.bulletlist {
 			font-family: times;
@@ -233,6 +237,12 @@
 			padding:4px;
 			width: 405px;
 			height: 295px;
+		}
+		.groupimage img{
+			transition: transform 0.2s;
+		}
+		.groupimage img:hover{
+			transform: scale(1.1)
 		}
 		#content .factlist {
 			font-family: times;
