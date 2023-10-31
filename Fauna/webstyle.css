@@ -135,6 +135,9 @@
 			width: 610px;
 			height: 640px;
 		}
+		#animals img:hover{
+			transform: scale(1.1);
+		}
 		#content {
 			width: 90%;
 			height: 100%;
