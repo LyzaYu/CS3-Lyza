@@ -28,7 +28,10 @@
 			font-size: 20px;
 			font-family: arial;
 			text-shadow: 0px 1px 2px black;
-			border: 2px solid white;
+			border-top: 2px solid white;
+			border-bottom: 2px solid white;
+			border-left: 2px solid rgb(110, 120, 80);
+			border-right: 2px solid rgb(110, 120, 80);
 			padding: 10px 40px;
 			transition-duration: 0.4s;
 		}
