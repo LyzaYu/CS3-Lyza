@@ -130,6 +130,11 @@
 			margin-top: 50px;
 			font-family: system;
 		}
+		.scrollsource{
+			font-size: 15px;
+			color: black;
+			font-family: arial;
+		}
 		#pictures {
 			float: right;
 			width: 47%;
