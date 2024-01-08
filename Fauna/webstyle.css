@@ -16,12 +16,12 @@
 			flex-direction: row;
 			margin: 0;
 		}
-		#menu > div {
+		#menu > .page {
 			padding: 10px;
 			margin-top: 15px;
 			margin-bottom: 10px;
 		}
-		#menu div a {
+		#menu .page a {
 			background-color: rgb(110, 120, 80);
 			text-decoration: none;
 			color: white;
@@ -35,18 +35,18 @@
 			padding: 10px 40px;
 			transition-duration: 0.4s;
 		}
-		#menu div a:hover{
+		#menu .page a:hover{
 			background-color: rgb(243, 229, 160);
 			border: 2px solid black;
 			text-shadow: 1px 2px 7px black;
 			border-radius: 25px;
 		}
-		#menu div a:active{
+		#menu .page a:active{
 			box-shadow: 0px 2px 4px black;
 		}
 		.tohover .hovertext {
 			visibility: hidden;
-			width: 150px;
+			width: 230px;
 			background-color: black;
 			color: white;
 			text-align: center;
@@ -58,38 +58,37 @@
 		.tohover:hover .hovertext {
 			visibility: visible;
 		}
-		#nav{
-			margin-top:30px;
-		}
-		#nav a {
+		.hovertext a{
+			font-size:19px;
 			text-decoration: none;
-			display: inline;
-			padding: 10px 16px;
-			transition-duration: 0.4s;
-		}
-		#nav a:hover {
-			background-color: rgb(243, 229, 160);
 			color: white;
-			text-shadow: 0px 2px 7px black;
-			transition-duration:0.2s;
+			display: flex;
+			flex-direction: row;
 		}
-		#nav a:active {
-			box-shadow: 1px 1px 4px black;
+		.hovertext a:hover {
+			color: purple;
+			text-decoration: underline;
 		}
-		.previous {
-			background-color: rgb(110, 120, 80);
-			color: white;
-			margin: 0 5px 0px 230px;
-			border: 2px solid white;
+		.tohover a .sprite1{
+			background: url("https://icon-library.com/images/icon-sprite/icon-sprite-16.jpg") no-repeat -61px -111px;
+			width: 27px;
+			height: 27px;
+			margin: 0px 5px;
 		}
-		.next {
-			background-color: rgb(110, 120, 80);
-			color: white;
-			margin: none;
-			border: 2px solid white;
+		.tohover a .sprite2{
+			background: url("https://icon-library.com/images/icon-sprite/icon-sprite-16.jpg") no-repeat -10px -260px;
+			width: 27px;
+			height: 27px;
+			margin: 0px 5px;
 		}
-		.round {
-			border-radius: 50%;
+		.tohover a div{
+				transition: transform 0.2s;
+		}
+		.tohover a div:hover{
+			transform: scale(1.1);
+		}
+		.search {
+			margin-left: 20%;
 		}
 		.search input[type=text]{
 			background-color: rgb(110, 120, 80);
@@ -99,6 +98,7 @@
 			font-family: arial;
 			text-align: left;
 			margin-right: 10px;
+			margin-top:20px;
 			text-shadow: 0px 1px 2px black;
 			width: 200px;
 		}	
@@ -133,10 +133,9 @@
 		.scrollsource{
 			font-size: 15px;
 			color: black;
-			font-family: arial;
 		}
-		#pictures {
-			float: right;
+		aside {
+			margin-left: 52%;
 			width: 47%;
 			height: 100%;
 			display: flex;
@@ -144,13 +143,15 @@
 			background-color: rgb(243, 229, 160, 0.50);
 		}
 		#animals {
+			margin-left: 0.8%;
 			width: 100%;
 			height: 100%;
 		}
 		#animals img{
+			width: 31%;
 			transition: transform 0.2s;
 			padding-left:1%;
-			padding-top: 3px;
+			padding-top: 0.55%;
 		}
 		#animals img:hover{
 			transform: scale(1.1);
@@ -173,7 +174,7 @@
 		.source:hover .hoversource {
 			visibility: visible;
 		}
-		#content {
+		.content {
 			width: 90%;
 			height: 100%;
 			background-color: rgb(243, 229, 160, 0.80);
@@ -181,11 +182,11 @@
 			flex-direction: column;
 			margin-left: 5%;
 		}
-		#content #col1{
+		.content #col1{
 			display: flex;
 			flex-direction: row;
 		}
-		#content #col2{
+		.content #col2{
 			display: flex;
 			flex-direction: row;
 		}
@@ -227,6 +228,7 @@
 			font-size: 15px;
 			padding: none;
 		}
+		
 		.vidtitle{
 			margin-left: 50px;
 			text-decoration: none;
@@ -243,7 +245,7 @@
 			padding:2px;
 
 		}
-		#content .groupimage {
+		.content .groupimage {
 			margin-top: 30px;
 			margin-left: 20px;
 			border: 2px solid black;
@@ -257,17 +259,18 @@
 		.groupimage img:hover{
 			transform: scale(1.1)
 		}
-		#content .factlist {
+		.content .factlist {
 			font-family: times;
 			font-size: 15px;
 			
 		}
-		#content h3 {
+		
+		.content h3 {
 			margin-left: 25px;
 			border-bottom: 1px solid black;
 			width: 400px;
 		}
-		#content .facts{
+		.content .facts{
 			text-align: left;
 			margin-left: 10px;
 			float: left;
@@ -277,4 +280,96 @@
 			height: 320px;
 		}
 		
+		table{
+			width: 60%;
+
+			margin-top: 25px;
+			margin-bottom: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: rgb(243, 229, 160, 0.80);
+			padding: 20px;
+		}
+		#listtable{
+			overflow-y: scroll;
+			height: 500px;
+		}
+		th{
+			font-weight: bold;
+			font-size: 20px;
+			height: 30px;
+			vertical-align: middle;
+		}
+		td{
+			padding-top: 15px;
+			text-align: center;
+		}
+		td a{
+			text-decoration: none;
+			color: black;
+		}
+		td:first-child{
+			width: 16%;
+			background-color: rgb(101, 67, 33, 0.7);
+		}
+		td:nth-child(2):hover{
+			transform: scale(1.2);
+		}
+		tr:nth-of-type(odd){
+			background-color: rgb(110, 120, 80, 0.8);
+		}
+		th:nth-child(1){
+			background-color: brown;
+		}
+		th:nth-child(2){
+			background-color: rgb(110, 120, 80);
+		}
+		th:nth-child(3){
+			background-color: rgb(270, 300, 110);
+		}
+		
+		.feedcontent .sector{
+			width: 90%;
+			background-color: rgb(243, 229, 160, 0.85);
+			display: flex;
+			flex-direction: row;
+			margin-left: 4%;
+			margin-top: 40px;
+			padding: 1%
+		}
+		
+		.feedcontent .bio{
+			display: flex;
+			flex-direction: column;
+			margin-left:3%;
+			width: 50%;
+			font-family: times;
+			font-size: 20px;
+		}
+		.feedcontent #vidtitle{
+			width: 80%;
+			font-size: 25px;
+			padding-bottom:30px;
+			border-bottom: 2px solid black;
+		}
+		#newstitle{
+			margin: 15px 5%;
+			text-align: center;
+		}
+		.news1 {
+			width: 40%;
+			background-color: rgb(243, 229, 160, 0.85);
+		    float: left;
+			margin: 15px 15px;
+			padding: 1% 1%;
+			transition: transform 0.2s;
+		}
 	
+		.news1 img {
+			margin-left: 5%;
+			height: 60%;
+			width: 90%;
+		}
+		
+		
+		
