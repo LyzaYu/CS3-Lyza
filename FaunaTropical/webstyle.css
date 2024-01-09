@@ -3,7 +3,7 @@
 			background-image: url("https://github.com/LyzaYu/CS3-Lyza/blob/main/FaunaTropical/bg.jpg?raw=true");
 			margin: 0;
 		}
-		#logo {
+				#logo {
 			float: left;
 			margin: 10px;
 			width: 100px;
@@ -355,8 +355,30 @@
 		#newstitle{
 			margin: 15px 5%;
 			text-align: center;
+			text-decoration: none;
+			color: black;
+			font-size: 20px;
 		}
 		.news1 {
+			width: 40%;
+			background-color: rgb(243, 229, 160, 0.85);
+		    float: left;
+			margin: 15px 5%;
+			padding: 1% 1%;
+			transition: transform 0.2s;
+		}
+		.news1:hover{
+			transform: scale(1.05);
+			border: 1px solid black;
+		}
+	
+		.news1 img {
+			margin-left: 5%;
+			height: 280px;
+			width: 90%;
+		}
+		
+		.news2 {
 			width: 40%;
 			background-color: rgb(243, 229, 160, 0.85);
 		    float: left;
@@ -364,11 +386,56 @@
 			padding: 1% 1%;
 			transition: transform 0.2s;
 		}
-	
-		.news1 img {
+		.news2 img {
 			margin-left: 5%;
-			height: 60%;
-			width: 90%;
+			height: 280px;
+			width: 500px;
+		}
+		.news2:hover{
+			transform: scale(1.05);
+			border: 1px solid black;
+		}
+		.news3 {
+			width: 40%;
+			background-color: rgb(243, 229, 160, 0.85);
+		    float: left;
+			margin: 15px 15px;
+			padding: 1% 1%;
+			transition: transform 0.2s;
+		}
+		.news3 img {
+			margin-left: 5%;
+			height: 280px;
+			width: 500px;
+		}
+		.news3:hover{
+			transform: scale(1.05);
+			border: 1px solid black;
+		}
+		.news3 {
+			width: 40%;
+			background-color: rgb(243, 229, 160, 0.85);
+		    float: left;
+			margin: 15px 5%;
+			padding: 1% 1%;
+			transition: transform 0.2s;
+		}
+		.news4 img {
+			margin-left: 5%;
+			height: 280px;
+			width: 500px;
+		}
+		.news4:hover{
+			transform: scale(1.05);
+			border: 1px solid black;
+		}
+		.news4 {
+			width: 40%;
+			background-color: rgb(243, 229, 160, 0.85);
+		    float: left;
+			margin: 15px 15px;
+			padding: 1% 1%;
+			transition: transform 0.2s;
 		}
 		
 		
