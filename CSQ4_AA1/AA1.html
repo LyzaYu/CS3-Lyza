@@ -18,6 +18,13 @@
         
             table{
               border-collapse: collapse;
+              margin-left: auto;
+              margin-right: auto;
+              margin-top: 20px;
+            } 
+            
+            th{
+              padding: 15px;
             }
           
             #set{
@@ -37,7 +44,7 @@
               transition: transform .15s;
             }
             
-            div{
+            #buttons{
               margin-left: auto;
               margin-right: auto;
             }
@@ -75,7 +82,7 @@
    
         <h1>STONK SUPPLY</h1>
         
-        <div> 
+        <div id = "buttons"> 
           <button onclick = addItem()> Add Item </button>
           <button onclick = addNoOfItem()> Add Stonks </button>
           <button onclick = subNoOfItem()> Delete Stonks </button>
@@ -88,105 +95,108 @@
         </div>
   
         <script>
-        
-            var supply=[];
-            
-            function addItem(){
-              
-              var name=(prompt("Enter what item would you like to add to the supply")).toLowerCase();
-              var num=parseInt(prompt("Enter how many of " + name + "'s would you like to add to the supply"));
-              supply.push({itemName:name ,  itemStock:num});
-               
-              if(num<=0){
-                for(var w=0 ; w <= (supply.length) ; w++){
-                  if(supply[w]["itemName"] == name){
-                    supply.splice(w,1);
-                    break;
-                  }
-                }
-              }
-              
-            }
-            
-            function addNoOfItem(){
-              
-              var itemname = (prompt("Enter what item would you like to add stocks")).toLowerCase();
-              var stock = parseInt(prompt("Enter how many stocks you would like to add"));
-                
-              for(var i=0 ; i <= (supply.length) ; i++){
-                if(supply[i]["itemName"] == itemname){
-                  var finalstock = supply[i]["itemStock"] + stock;
-                  supply[i] = {itemName:itemname , itemStock:finalstock};
-                  break;
-                }
-              }
-                
-              if(finalstock<=0){
-                for(var w=0 ; w <= (supply.length) ; w++){
-                  if(supply[w]["itemName"] == itemname){
-                    supply.splice(w,1);
-                    break;
-                  }
-                }
-              }
-              
-            }
-            
-            function subNoOfItem(num){
-              
-              var itemname = (prompt("Enter what item would you like to delete stocks")).toLowerCase();
-              var stock = parseInt(prompt("Enter how many stocks you would like to delete"));
-                
-              for(var w=0 ; w <= (supply.length) ; w++){
-                if(supply[w]["itemName"] == itemname){
-                  var finalstock = supply[w]["itemStock"] - stock;
-                  supply[w] = {itemName:itemname , itemStock:finalstock};
-                  break;
-                }
-              }
-                
-              if(finalstock<=0){
-                for(var w=0 ; w <= (supply.length) ; w++){
-                  if(supply[w]["itemName"] == itemname){
-                    supply.splice(w,1);
-                    break;
-                  }
-                }
-              }
-              
-            }
-            
-            function removeItem(name){
-               
-              var itemName = (prompt("Enter what item would you like to delete stocks")).toLowerCase();
-                
-              for(var w=0 ; w <= (supply.length) ; w++){
-                if(supply[w]["itemName"] == itemName){
-                  supply.splice(w,1);
-                  break;
-                }
-              }
-              
-            }
-            function displayItems(){
-              
-              document.write("<table border='1px'>");
-              document.write("<tr>");
-              document.write("<th>" + "SUPPLY" + "</th>");
-              document.write("<th>" + "STONKS" + "</th>");
-              document.write("</tr>");
-              
-              for(var t=0; t< (supply.length); t++){
-                document.write("<tr>");
-                document.write("<td>" + supply[t]["itemName"] + "</td>");
-                document.write("<td>" + supply[t]["itemStock"] + "</td>");
-                document.write("</tr>");
-              }
-              
-              document.write("</table>")
-            }
-            
-            
+        var supply = [];
+
+	    	function addItem() {
+	    	  
+    			var name = prompt("Enter what item would you like to add to the supply").toLowerCase();
+    			var num = parseInt(prompt("Enter how many of " + name + "'s would you like to add to the supply"));
+    			supply.push({ itemName: name, itemStock: num });
+
+		    	if (num <= 0) {
+	    			for (var w = 0; w <= supply.length; w++) {
+		    			if (supply[w]["itemName"] == name) {
+			    			supply.splice(w, 1);
+			    			break;
+			    		}
+	    			}
+	    		}
+	    		
+	    	}
+
+     		function addNoOfItem() {
+     		  
+	    		var itemname = prompt("Enter what item would you like to add stocks").toLowerCase();
+		    	var stock = parseInt(prompt("Enter how many stocks you would like to add"));
+
+		    	for (var i = 0; i <= supply.length; i++) {
+		    		if (supply[i]["itemName"] == itemname) {
+			    		var finalstock = supply[i]["itemStock"] + stock;
+		    			supply[i] = { itemName: itemname, itemStock: finalstock };
+		     			break;
+		  	  	}
+	    		}
+
+	    		if (finalstock <= 0) {
+		    		for (var w = 0; w <= supply.length; w++) {
+			    		if (supply[w]["itemName"] == itemname) {
+			    			supply.splice(w, 1);
+			    			break;
+			    		}
+		    		}
+			    }
+			    
+	     	}
+
+	    	function subNoOfItem(num) {
+	    
+	    		var itemname = prompt("Enter what item would you like to delete stocks").toLowerCase();
+		    	var stock = parseInt(prompt("Enter how many stocks you would like to delete"));
+
+	    		for (var w = 0; w <= supply.length; w++) {
+		    		if (supply[w]["itemName"] == itemname) {
+		  	  		var finalstock = supply[w]["itemStock"] - stock;
+		    			supply[w] = { itemName: itemname, itemStock: finalstock };
+	 	    			break;
+		    		}
+		    	}
+
+	    		if (finalstock <= 0) {
+		    		for (var w = 0; w <= supply.length; w++) {
+		    			if (supply[w]["itemName"] == itemname) {
+		    				supply.splice(w, 1);
+			   	  		break;
+			    		}
+			    	}
+	    		}
+	    		
+	    	}
+
+	    	function removeItem(name) {
+	 
+	    		var itemName = prompt("Enter what item would you like to delete stocks").toLowerCase();
+
+	    		for (var w = 0; w <= supply.length; w++) {
+	    			if (supply[w]["itemName"] == itemName) {
+		  	  		supply.splice(w, 1);
+	  	  			break;
+		    		}
+		    	}
+		    	
+	     	}
+
+	    	function displayItems() {
+		
+		    	var tableDiv = document.getElementById("table");
+
+	    		var tableHTML = "<table border='1px'>";
+		    	tableHTML += "<tr>";
+		    	tableHTML += "<th>SUPPLY</th>";
+	    		tableHTML += "<th>STONKS</th>";
+	    		tableHTML += "</tr>";
+
+		    	for (var t = 0; t < supply.length; t++) {
+		    		tableHTML += "<tr>";
+			    	tableHTML += "<td>" + supply[t]["itemName"] + "</td>";
+	    			tableHTML += "<td>" + supply[t]["itemStock"] + "</td>";
+		    		tableHTML += "</tr>";
+	    		}
+
+	    		tableHTML += "</table>";
+
+	    		tableDiv.innerHTML = tableHTML;
+	    	}
+
         </script>
         
     </body>
