@@ -24,6 +24,14 @@
                 var name=(prompt("Enter what item would you like to add to the supply")).toLowerCase();
                 var num=parseInt(prompt("Enter how many of " + name + "'s would you like to add to the supply"));
                 supply.push({itemName:name ,  itemStock:num});
+                if(num<=0){
+                  for(var w=0 ; w <= (supply.length) ; w++){
+                    if(supply[w]["itemName"] == name){
+                        supply.splice(w,1);
+                        break;
+                    }
+                }
+                }
             }
             function addNoOfItem(){
                 var itemname = (prompt("Enter what item would you like to add stocks")).toLowerCase();
@@ -35,6 +43,14 @@
                         break;
                     }
                 }
+                if(finalstock<=0){
+                  for(var w=0 ; w <= (supply.length) ; w++){
+                    if(supply[w]["itemName"] == itemname){
+                        supply.splice(w,1);
+                        break;
+                    }
+                }
+                }
             }
             function subNoOfItem(num){
                 var itemname = (prompt("Enter what item would you like to delete stocks")).toLowerCase();
@@ -45,6 +61,14 @@
                         supply[w] = {itemName:itemname , itemStock:finalstock};
                         break;
                     }
+                }
+                if(finalstock<=0){
+                  for(var w=0 ; w <= (supply.length) ; w++){
+                    if(supply[w]["itemName"] == itemname){
+                        supply.splice(w,1);
+                        break;
+                    }
+                }
                 }
             }
             function removeItem(name){
