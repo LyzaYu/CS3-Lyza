@@ -37,6 +37,11 @@
               transition: transform .15s;
             }
             
+            div{
+              margin-left: auto;
+              margin-right: auto;
+            }
+            
             button:hover{
               transform: scale(1.2);
             }
@@ -46,7 +51,7 @@
             }
             
             button:nth-child(2){
-              background-color: #9CAF88;
+              background-color: #f7b4bb;
             }
             
             button:nth-child(3){
@@ -54,7 +59,7 @@
             }
             
             button:nth-child(4){
-              background-color: #fee7aa;
+              background-color: #b2caed;
             }
             
             button:last-child{
@@ -77,6 +82,8 @@
           <button onclick = displayItems()> Display Stonks  </button>
           <button onclick = removeItem()> Delete Item  </button>
         </div>
+        
+        <div id = "table"> </div>
         
         </div>
   
@@ -161,7 +168,6 @@
               }
               
             }
-            
             function displayItems(){
               
               document.write("<table border='1px'>");
@@ -179,6 +185,7 @@
               
               document.write("</table>")
             }
+            
             
         </script>
         
