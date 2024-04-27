@@ -1,99 +1,188 @@
 <!DOCTYPE html>
 <html>
+  
     <head>
+      
         <style>
+            
+            body{
+              background-image: url('data:image/jpeg;base64,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');
+              background-repeat: no-repeat;
+              background-attachment: fixed; 
+              background-size: 100% 100%;
+            }
+            
+            h1{
+              text-align: center;
+            }
+        
             table{
-                border-collapse: collapse;
+              border-collapse: collapse;
+            }
+          
+            #set{
+              background-color: white;
+              width: 70%;
+              margin-left: 15%;
+              margin-left: auto;
+              padding: 30px;
+              border: 1px solid black;
+              border-radius: 15%;
+            }
+            
+            button{
+              border: 2px solid black gray;
+              padding: 5px;
+              font-family: georgia;
+              text-align: center;
+              transition: transform .15s;
+            }
+            
+            button:hover{
+              transform: scale(1.2);
+            }
+            
+            button:first-child{
+              background-color: #ddeefa;
+            }
+            
+            button:nth-child(2){
+              background-color: #9CAF88;
+            }
+            
+            button:nth-child(3){
+              background-color: #dfc8e4;
+            }
+            
+            button:nth-child(4){
+              background-color: #fee7aa;
+            }
+            
+            button:last-child{
+              background-color: #f69697;
             }
         </style>
+        
     </head>
+    
     <body>
+      
+        <div id = "set">
+   
+        <h1>STONK SUPPLY</h1>
+        
         <div> 
-            <button onclick = addItem()> add item </button>
-            <button onclick = addNoOfItem()> add stonks </button>
-            <button onclick = subNoOfItem()> delete stonks </button>
-            <button onclick = displayItems()> display stonks  </button>
-            <button onclick = removeItem()> delete item  </button>
+          <button onclick = addItem()> Add Item </button>
+          <button onclick = addNoOfItem()> Add Stonks </button>
+          <button onclick = subNoOfItem()> Delete Stonks </button>
+          <button onclick = displayItems()> Display Stonks  </button>
+          <button onclick = removeItem()> Delete Item  </button>
         </div>
+        
         </div>
-
-        <h1>Stonks</h1>
+  
         <script>
+        
             var supply=[];
+            
             function addItem(){
-                var name=(prompt("Enter what item would you like to add to the supply")).toLowerCase();
-                var num=parseInt(prompt("Enter how many of " + name + "'s would you like to add to the supply"));
-                supply.push({itemName:name ,  itemStock:num});
-                if(num<=0){
-                  for(var w=0 ; w <= (supply.length) ; w++){
-                    if(supply[w]["itemName"] == name){
-                        supply.splice(w,1);
-                        break;
-                    }
+              
+              var name=(prompt("Enter what item would you like to add to the supply")).toLowerCase();
+              var num=parseInt(prompt("Enter how many of " + name + "'s would you like to add to the supply"));
+              supply.push({itemName:name ,  itemStock:num});
+               
+              if(num<=0){
+                for(var w=0 ; w <= (supply.length) ; w++){
+                  if(supply[w]["itemName"] == name){
+                    supply.splice(w,1);
+                    break;
+                  }
                 }
-                }
+              }
+              
             }
+            
             function addNoOfItem(){
-                var itemname = (prompt("Enter what item would you like to add stocks")).toLowerCase();
-                var stock = parseInt(prompt("Enter how many stocks you would like to add"));
-                for(var i=0 ; i <= (supply.length) ; i++){
-                    if(supply[i]["itemName"] == itemname){
-                        var finalstock = supply[i]["itemStock"] + stock;
-                        supply[i] = {itemName:itemname , itemStock:finalstock};
-                        break;
-                    }
+              
+              var itemname = (prompt("Enter what item would you like to add stocks")).toLowerCase();
+              var stock = parseInt(prompt("Enter how many stocks you would like to add"));
+                
+              for(var i=0 ; i <= (supply.length) ; i++){
+                if(supply[i]["itemName"] == itemname){
+                  var finalstock = supply[i]["itemStock"] + stock;
+                  supply[i] = {itemName:itemname , itemStock:finalstock};
+                  break;
                 }
-                if(finalstock<=0){
-                  for(var w=0 ; w <= (supply.length) ; w++){
-                    if(supply[w]["itemName"] == itemname){
-                        supply.splice(w,1);
-                        break;
-                    }
+              }
+                
+              if(finalstock<=0){
+                for(var w=0 ; w <= (supply.length) ; w++){
+                  if(supply[w]["itemName"] == itemname){
+                    supply.splice(w,1);
+                    break;
+                  }
                 }
-                }
+              }
+              
             }
+            
             function subNoOfItem(num){
-                var itemname = (prompt("Enter what item would you like to delete stocks")).toLowerCase();
-                var stock = parseInt(prompt("Enter how many stocks you would like to delete"));
+              
+              var itemname = (prompt("Enter what item would you like to delete stocks")).toLowerCase();
+              var stock = parseInt(prompt("Enter how many stocks you would like to delete"));
+                
+              for(var w=0 ; w <= (supply.length) ; w++){
+                if(supply[w]["itemName"] == itemname){
+                  var finalstock = supply[w]["itemStock"] - stock;
+                  supply[w] = {itemName:itemname , itemStock:finalstock};
+                  break;
+                }
+              }
+                
+              if(finalstock<=0){
                 for(var w=0 ; w <= (supply.length) ; w++){
-                    if(supply[w]["itemName"] == itemname){
-                        var finalstock = supply[w]["itemStock"] - stock;
-                        supply[w] = {itemName:itemname , itemStock:finalstock};
-                        break;
-                    }
+                  if(supply[w]["itemName"] == itemname){
+                    supply.splice(w,1);
+                    break;
+                  }
                 }
-                if(finalstock<=0){
-                  for(var w=0 ; w <= (supply.length) ; w++){
-                    if(supply[w]["itemName"] == itemname){
-                        supply.splice(w,1);
-                        break;
-                    }
-                }
-                }
+              }
+              
             }
+            
             function removeItem(name){
-                var itemName = (prompt("Enter what item would you like to delete stocks")).toLowerCase();
-                for(var w=0 ; w <= (supply.length) ; w++){
-                    if(supply[w]["itemName"] == itemName){
-                        supply.splice(w,1);
-                        break;
-                    }
+               
+              var itemName = (prompt("Enter what item would you like to delete stocks")).toLowerCase();
+                
+              for(var w=0 ; w <= (supply.length) ; w++){
+                if(supply[w]["itemName"] == itemName){
+                  supply.splice(w,1);
+                  break;
                 }
+              }
+              
             }
+            
             function displayItems(){
-                document.write("<table border='1px'>");
+              
+              document.write("<table border='1px'>");
+              document.write("<tr>");
+              document.write("<th>" + "SUPPLY" + "</th>");
+              document.write("<th>" + "STONKS" + "</th>");
+              document.write("</tr>");
+              
+              for(var t=0; t< (supply.length); t++){
                 document.write("<tr>");
-                document.write("<th>" + "SUPPLY" + "</th>");
-                document.write("<th>" + "STONKS" + "</th>");
+                document.write("<td>" + supply[t]["itemName"] + "</td>");
+                document.write("<td>" + supply[t]["itemStock"] + "</td>");
                 document.write("</tr>");
-                for(var t=0; t< (supply.length); t++){
-                    document.write("<tr>");
-                    document.write("<td>" + supply[t]["itemName"] + "</td>");
-                    document.write("<td>" + supply[t]["itemStock"] + "</td>");
-                    document.write("</tr>");
-                }
-                document.write("</table>")
+              }
+              
+              document.write("</table>")
             }
+            
         </script>
+        
     </body>
+    
 </html>
