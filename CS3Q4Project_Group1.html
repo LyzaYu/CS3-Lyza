@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemental Bender Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #character-selection, #battle {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        select, button {
+            padding: 8px;
+            font-size: 16px;
+            margin-top: 8px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:disabled {
+            background-color: #000;
+        }
+
+        button:hover:not(:disabled) {
+            background-color: #45a049;
+        }
+
+        #battle {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+        #player1, #player2 {
+            width: 40%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #player1 {
+            background-color: #fff; 
+        }
+
+        #player2 {
+            background-color: brown; 
+        }
+
+        #player1 h3, #player2 h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        #player1 p, #player2 p {
+            margin: 10px 0;
+        }
+
+        #player1-skills button, #player2-skills button {
+            display: block;
+            width: 100%; 
+            margin: 5px 0; 
+        }
+
+        #messages {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+            opacity: 0.7; 
+        }
+    </style>
+</head>
+<body>
+    <div id="character-selection">
+        <h2>Select your characters:</h2>
+        <div>
+            Player 1:
+            <select id="player1-select">
+                <option value="air">Air Bender</option>
+                <option value="earth">Earth Bender</option>
+                <option value="flame">Flame Bender</option>
+                <option value="code">Code Bender</option>
+            </select>
+        </div>
+        <div>
+            Player 2:
+            <select id="player2-select">
+                <option value="air">Air Bender</option>
+                <option value="earth">Earth Bender</option>
+                <option value="flame">Flame Bender</option>
+                <option value="code">Code Bender</option>
+            </select>
+        </div>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="battle" style="display: none;">
+        <div id="player1">
+            <h3 id="player1-name"></h3>
+            <p>HP: <span id="player1-hp">200</span></p>
+            <div id="player1-skills"></div>
+        </div>
+        <div id="player2">
+            <h3 id="player2-name"></h3>
+            <p>HP: <span id="player2-hp">200</span></p>
+            <div id="player2-skills"></div>
+        </div>
+        <div id="messages"></div>
+    </div>
+
+    <script>
+        const benders = {
+            air: {
+                name: "Air Bender",
+                skills: [
+                    { name: "Dust Whirl Cutter", damageRange: [1, 10], cooldown: 1 },
+                    { name: "Hurricane", damageRange: [10, 15], cooldown: 2 },
+                    { name: "Air style: Typhoon of Wind Slashes", damageRange: [20, 25], cooldown: 4 },
+                    { name: "Black Wind Mountain Mist", damageRange: [35, 50], cooldown: 8 },
+                ],
+            },
+            earth: {
+                name: "Earth Bender",
+                skills: [
+                    { name: "Volcanic Rock, Rapid Conquest", damageRange: [1, 10], cooldown: 1 },
+                    { name: "Rain of Stone", damageRange: [10, 15], cooldown: 2 },
+                    { name: "Hammering Stones", damageRange: [20, 25], cooldown: 4 },
+                    { name: "Arcs of Justice", damageRange: [35, 50], cooldown: 8 },
+                ],
+            },
+            flame: {
+                name: "Flame Bender",
+                skills: [
+                    { name: "Blooming Flame Undulation", damageRange: [1, 10], cooldown: 1 },
+                    { name: "Flame Tiger", damageRange: [10, 15], cooldown: 2 },
+                    { name: "Blazing Universe", damageRange: [20, 25], cooldown: 4 },
+                    { name: "Unknowing Fire", damageRange: [
